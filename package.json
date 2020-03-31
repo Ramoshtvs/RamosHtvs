@@ -1,0 +1,20 @@
+{
+  "name":"practicauno",
+  "version": "1.0.0",
+  "description": "Ejemplo de SASS",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass":"node-sass sass/main.scss css/estilo.css -w"
+  },
+  "keywords": [
+    "sass",
+    "practicauno",
+    "pw3"
+  ],
+  "author": "Oswaldo",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.13.1"
+  }
+  
+}

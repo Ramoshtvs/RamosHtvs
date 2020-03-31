@@ -1,0 +1,317 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.seccion-asignaturas {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#00b0ff), to(#1de968));
+  background-image: linear-gradient(to right bottom, #00b0ff, #1de968);
+  padding: 25rem 0 15rem 0;
+  margin-top: -12rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .seccion-asignaturas {
+    padding: 20rem 0 rem 0;
+  }
+}
+
+.btn, .btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 10rem;
+}
+
+.btn:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  -webkit-box-shadow: 0 1rem 2rem rgba(46, 46, 46, 0.2);
+          box-shadow: 0 1rem 2rem rgba(46, 46, 46, 0.2);
+}
+
+.btn:active {
+  outline: none;
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(46, 46, 46, 0.2);
+          box-shadow: 0 0.5rem 1rem rgba(46, 46, 46, 0.2);
+}
+
+.btn-blanco {
+  background-color: #e3e3e3;
+  color: #3f3f3f;
+}
+
+.row {
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+.row:not(:last-child) {
+  margin-bottom: 6rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .row:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .row {
+    max-width: 50rem;
+    padding: 0 3rem;
+  }
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row [class^="col-"] {
+  float: left;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.row [class^="col-"]:not(:last-child) {
+  margin-right: 6rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .row [class^="col-"]:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 3rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .row [class^="col-"] {
+    width: 100% !important;
+  }
+}
+
+.row .col-1-2 {
+  width: calc(((100% - 6rem) / 2));
+}
+
+.row .col-1-3 {
+  width: calc((100% - 2 * 6rem) / 3);
+}
+
+.row .col-2-3 {
+  width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem);
+}
+
+.row .col-1-4 {
+  width: calc((100% - 3 * 6rem) / 4);
+}
+
+.row .col-2-4 {
+  width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem);
+}
+
+.row .col-3-4 {
+  width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem);
+}
+
+.card {
+  -webkit-perspective: 150rem;
+          perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 50rem;
+}
+
+.card_lado {
+  position: absolute;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  height: inherit;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 3px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 1.5rem 4rem rgba(46, 46, 46, 0.15);
+          box-shadow: 0 1.5rem 4rem rgba(46, 46, 46, 0.15);
+}
+
+.card_lado-front {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#892af5), to(#2286d8));
+  background-image: linear-gradient(#892af5, #2286d8);
+  color: #e3e3e3;
+}
+
+.card_lado-back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.card_lado-back-1 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#2286d8), to(#892af5));
+  background-image: linear-gradient(to right bottom, #2286d8, #892af5);
+}
+
+.card:hover .card_lado-front {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.card:hover .card_lado-back {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+}
+
+.card_foto {
+  background-size: cover;
+  height: 14rem;
+  background-blend-mode: screen;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.card_foto-1 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#2286d8), to(#892af5)), url(../img/sisl.jpg);
+  background-image: linear-gradient(to right bottom, #2286d8, #892af5), url(../img/2015-09-23_14-16-22_613.jpg);
+}
+
+.card_heading {
+  font-size: 1.8rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: right;
+  color: #e3e3e3;
+  line-height: 3.5rem;
+  position: absolute;
+  top: 10rem;
+  right: 0.2rem;
+  width: 75%;
+}
+
+.card_heading-span {
+  padding: 1rem 1.5rem;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.card_heading-span-1 {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(137, 42, 245, 0.65)), to(rgba(34, 134, 216, 0.65)));
+  background-image: linear-gradient(rgba(137, 42, 245, 0.65), rgba(34, 134, 216, 0.65));
+}
+
+.card_detalle {
+  padding: 3rem;
+}
+
+.card_detalle ul {
+  list-style: none;
+  width: 80%;
+  margin: 5rem auto;
+}
+
+@media only screen and (max-width: 900px) {
+  .card_detalle ul {
+    margin: 3rem auto;
+  }
+}
+
+.card_detalle ul li {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 0.3rem;
+}
+
+.card_detalle ul li:not(:last-child) {
+  border-bottom: 1px solid #a5a0a0;
+}
+
+.card_sem {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 90%;
+  text-align: center;
+}
+
+.card_sem-box {
+  text-align: center;
+  color: #e3e3e3;
+  margin-top: 3rem;
+  margin-bottom: 6rem;
+}
+
+.card_sem_texto {
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.card_sem_numero {
+  font-size: 9rem;
+  font-weight: 100;
+  text-shadow: 0.8rem 0.5rem rgba(46, 46, 46, 0.25);
+}
+
+@media only screen and (max-width: 56.25em), only screen and (hover: over) {
+  .card {
+    height: auto;
+  }
+  .card_lado {
+    position: relative;
+    height: auto;
+    border-radius: 3px;
+    overflow: hidden;
+    -webkit-box-shadow: 0 1.5rem 4rem rgba(46, 46, 46, 0.15);
+            box-shadow: 0 1.5rem 4rem rgba(46, 46, 46, 0.15);
+    background-color: #e3e3e3;
+  }
+  .card_lado-back {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+  }
+  .card:hover .card_lado-front {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+  }
+  .card_heading {
+    font-size: 2rem;
+    right: 0.4rem;
+  }
+  .card_detalle {
+    padding: lrem 3rem;
+  }
+  .card_sem {
+    position: relative;
+    top: 0%;
+    left: 0;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+  .card_sem-box {
+    margin-bottom: 2rem;
+  }
+  .card_sem_texto {
+    font-size: 3rem;
+  }
+  .card_sem_numero {
+    font-size: 6rem;
+    text-shadow: none;
+  }
+}
+/*# sourceMappingURL=estilos.css.map */
